@@ -1,1 +1,59 @@
-<p>sign-up works!</p>
+<div class="sign-up-form">
+    <div class="form-border">
+        <div class="form-header">
+            <div class="text-header">Sign Up</div>
+            <div class="text-sub-header">Please fill in this form to create an account!</div>
+            <div class="line"></div>
+        </div>
+        <div class="form-body">
+            <div class="text section-name">
+                <input
+                    type="text"
+                    class="input-text"
+                    placeholder="First Name"
+                />
+                <input
+                    type="text"
+                    class="input-text"
+                    placeholder="Last Name"
+                />
+            </div>
+            <div class="text section-email">
+                <input
+                    type="text"
+                    class="input-text"
+                    placeholder="Email"
+                />
+            </div>
+            <div class="text section-password">
+                <input
+                    type="text"
+                    class="input-text"
+                    placeholder="Password"
+                />
+            </div>
+            <div class="text section-confirm-password">
+                <input
+                    type="text"
+                    class="input-text"
+                    placeholder="Confirm Password"
+                />
+            </div>
+            <div class="text section-checkbox">
+                <label>
+                    <input
+                        type="checkbox"
+                    />
+                    <span>I accept the Term of Use & Privacy Policy</span>
+                </label>
+            </div>
+        </div>
+        <div class="form-footer">
+            <div>
+                <button (click)="signUp($event)">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

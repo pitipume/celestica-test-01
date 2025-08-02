@@ -1,0 +1,46 @@
+.sign-up-form {
+    background-color: #3295db;
+    padding: 20px;
+    .form-border {
+        background-color: white;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 20px;
+        .form-header {
+            display: grid;
+            gap: 10px;
+            .text-header {
+                font-size: 32px;
+            }
+            .text-sub-header {
+                font-size: 18px;
+                color: #ccc4c0;
+            }
+            .line {
+                height: 1px;
+                width: 100%;
+                background-color: #ebebeb;
+            }
+        }
+        .form-body {
+            display: grid;
+            gap: 15px;
+            .text {
+                input[type=text] {
+                    font-size: 14px;
+                    padding: 4px;
+                    width: 100%;
+                }
+                input[type=checkbox] {
+                    margin: 0 8px 0 0;
+                }
+                &.section-name {
+                    display: flex;
+                    gap: 15px;
+                }
+            }
+        }
+    }
+}

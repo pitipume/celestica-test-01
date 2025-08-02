@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent {
-
+  constructor() {}
+  signUp(event: any) {
+    console.log('test sign up')
+    console.log('event: ', event)
+  }
 }
