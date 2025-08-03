@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class SignUpComponent {
   constructor() {}
   signUp(event: any) {
-    console.log('test sign up')
+    alert('Sign up completed!')
     console.log('event: ', event)
   }
 }
