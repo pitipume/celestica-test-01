@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { ProductResponse } from '../../models/product.response';
 import { ProductModel } from '../../models/product.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-dummy-product',
+  selector: 'app-product',
   standalone: true,
-  imports: [],
-  templateUrl: './dummy-product.component.html',
-  styleUrl: './dummy-product.component.scss'
+  imports: [CommonModule],
+  templateUrl: './product.component.html',
+  styleUrl: './product.component.scss'
 })
-export class DummyProductComponent implements OnInit {
+export class ProductComponent implements OnInit {
   public products: ProductModel[] = []
 
   constructor(
