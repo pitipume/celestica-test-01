@@ -25,6 +25,9 @@ export class AppComponent {
       case 'product':
         this.router.navigate(['/product'])
         break
+      case 'number-converter':
+        this.router.navigate(['/number-converter'])
+        break
       default:
         alert('Please check your url link again.')
         break
