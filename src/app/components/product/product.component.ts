@@ -22,13 +22,13 @@ export class ProductComponent implements OnInit {
     this.productService.getProduct().subscribe((response: ProductResponse) => {
       if (response) {
         this.products = response.products
-        console.log('products: ', response.products)
+        console.log('products: ', this.products)
       } else {
         console.log('The product is empty, please try again.')
       }
     })
   }
-  addToCart() {
+  addToCart(): void {
     alert('Add to cart!')
   }
 }

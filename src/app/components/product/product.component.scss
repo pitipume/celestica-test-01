@@ -1,16 +1,22 @@
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    border: none;
 
     .product-card {
         border: 1px solid grey;
         padding: 0px 20px;
-        width: clamp(250px, 100%, 500px);
+
+        &:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
 
         .header {
             text-align: center;
             align-items: center;
-            padding: 10px 10px 40px 10px;
+            padding: 10px;
 
             .product {
                 padding: 10px;
@@ -31,11 +37,26 @@
                     justify-self: center;
                 }
                 &.in-stock {
-                    color: green;
-                    border: 1px solid green;
-                    border-radius: 3px;
-                    width: 100px;
                     justify-self: center;
+                    .label {
+                        color: green;
+                        border: 1px solid green;
+                        border-radius: 3px;
+                        padding: 4px;
+                    }
+                    .qty {
+                        color: black;
+                        font-size: 14px;
+                    }
+                }
+                &.tag {
+                    .dropdown-btn {
+                        cursor: pointer;
+                    }
+                    .dropdown-list {
+                        display: none;
+
+                    }
                 }
             }
         }
@@ -60,9 +81,22 @@
                     background-color: rgb(207, 91, 91);
                     font-size: 20px;
                     width: 200px;
+                    cursor: pointer;
                 }
             }
         }
 
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
