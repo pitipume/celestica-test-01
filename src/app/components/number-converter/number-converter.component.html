@@ -1,6 +1,13 @@
 <div class="number-converter">
-    <label>Number:</label>
+    <label class="label">Number:</label>
     <label>&nbsp;</label>
-    <input type="text" placeholder="positive number only!">
-    <button>Submit</button>
+    <input 
+        class="number"
+        type="number" 
+        placeholder="positive number only!"
+        [(ngModel)]="inputNumber"
+    >
+    <button class="btn submit" (click)="convertToTH()">Submit</button>
+    <label>&nbsp;</label>
+    <div>{{ wordTH }}</div>
 </div>
