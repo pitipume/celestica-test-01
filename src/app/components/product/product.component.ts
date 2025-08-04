@@ -24,7 +24,7 @@ export class ProductComponent implements OnInit {
         this.products = response.products
         console.log('products: ', this.products)
       } else {
-        console.log('The product is empty, please try again.')
+        alert('The product is empty, please try again.')
       }
     })
   }

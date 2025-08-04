@@ -1,19 +1,33 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { ProductComponent } from './components/product/product.component';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    SignUpComponent, 
-    ProductComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'celestica-test-01';
+
+  constructor(
+    public router: Router,
+  ) { }
+
+  navigateTo(url: string): void {
+    switch (url) {
+      case 'sign-up':
+        this.router.navigate(['/sign-up'])
+        break
+      case 'product':
+        this.router.navigate(['/product'])
+        break
+      default:
+        alert('Please check your url link again.')
+        break
+    }
+  }
 }
